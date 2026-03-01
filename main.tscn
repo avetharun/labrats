@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bdtflmn6r4b3b"]
+
+[ext_resource type="Script" uid="uid://b6sbey4hyl5a7" path="res://scripts/selector.gd" id="1_ig7tw"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_7dm0k"]
+inner_radius = 0.3
+outer_radius = 0.306
+
+[sub_resource type="TorusMesh" id="TorusMesh_ig7tw"]
+inner_radius = 0.3
+outer_radius = 0.306
+
+[node name="Node3D" type="Node3D" unique_id=937716169]
+
+[node name="Player" type="Node3D" parent="." unique_id=1835935826]
+
+[node name="Selector" type="Node3D" parent="Player" unique_id=1542914549]
+script = ExtResource("1_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Selector" unique_id=672161403]
+mesh = SubResource("TorusMesh_7dm0k")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player/Selector" unique_id=2095097586]
+transform = Transform3D(0.75, 0, 0, 0, 1, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = SubResource("TorusMesh_ig7tw")
