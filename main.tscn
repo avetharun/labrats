@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://diduiuqcrrfj5" path="res://addons/kenney_prototype_textures/dark/texture_13.png" id="1_ig7tw"]
 [ext_resource type="Script" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b4vu8msijbe7r" path="res://addons/kenney_prototype_textures/orange/texture_11.png" id="2_0xm2m"]
-[ext_resource type="PackedScene" path="res://ball.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://b6q3b1gk6xctm" path="res://ball.tscn" id="2_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b08mk811hqqpr" path="res://addons/kenney_prototype_textures/purple/texture_01.png" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bieomfngnbjv2" path="res://addons/kenney_prototype_textures/dark/texture_04.png" id="6_7mycd"]
 
