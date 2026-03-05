@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c4cp5ktymuxqi"]
+
+[ext_resource type="Texture2D" uid="uid://ovqgppahc74h" path="res://addons/kenney_prototype_textures/green/texture_02.png" id="1_kw545"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7mycd"]
+radius = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_texture = ExtResource("1_kw545")
+
+[sub_resource type="SphereMesh" id="SphereMesh_272bh"]
+material = SubResource("StandardMaterial3D_lquwl")
+radius = 0.3
+height = 0.6
+
+[node name="cheese" type="RigidBody3D" unique_id=54507257 groups=["food"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2134657295]
+shape = SubResource("SphereShape3D_7mycd")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=281632167]
+mesh = SubResource("SphereMesh_272bh")

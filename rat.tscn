@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bl6awxa3l1h8g"]
+
+[ext_resource type="Script" uid="uid://blni887ipqolk" path="res://rat.gd" id="1_pmwci"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_io2wn"]
+radius = 0.25
+height = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pmwci"]
+radius = 0.25
+
+[node name="rat" type="CharacterBody3D" unique_id=134169383 groups=["Rats"]]
+script = ExtResource("1_pmwci")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1009064066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("SphereMesh_io2wn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=55546790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("SphereShape3D_pmwci")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=499662240]
+path_height_offset = 0.5
