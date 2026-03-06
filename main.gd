@@ -35,11 +35,8 @@ func _physics_process(delta: float) -> void:
 			add_child(new_obj)
 			new_obj.get_child(0).set_deferred("disabled", false)
 			new_obj.position = result.position + (result.normal*0.25)
-	
-	if !get_tree().get_nodes_in_group("food").is_empty():
-		for node in get_tree().get_nodes_in_group("food"):
-			food_location = node.global_transform.origin
-			get_tree().call_group("Rats", "update_target_location", food_location)
+			get_tree().call_group("Rats", "set_target", new_obj)
+			
 	
 	if Input.is_action_just_released("left_click"):
 		place_copy = false

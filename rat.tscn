@@ -10,10 +10,19 @@ height = 0.5
 radius = 0.25
 
 [node name="rat" type="CharacterBody3D" unique_id=134169383 groups=["Rats"]]
+floor_block_on_wall = false
 script = ExtResource("1_pmwci")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1009064066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("SphereMesh_io2wn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=248079101]
+transform = Transform3D(0.46472907, 0, 0, 0, 0.46472907, 0, 0, 0, 0.46472907, 0, 0.25, -0.29999998)
+mesh = SubResource("SphereMesh_io2wn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1758849099]
+transform = Transform3D(0.46472907, 0, 0, 0, 0.46472907, 0, 0, 0, 1.5163827, 0, 0.18853766, 0.5855794)
 mesh = SubResource("SphereMesh_io2wn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=55546790]
@@ -22,3 +31,4 @@ shape = SubResource("SphereShape3D_pmwci")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=499662240]
 path_height_offset = 0.5
+debug_enabled = true

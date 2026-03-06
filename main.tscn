@@ -1,11 +1,12 @@
-[gd_scene format=3 uid="uid://bqxpripr2m3de"]
+[gd_scene format=3 uid="uid://bdtflmn6r4b3b"]
 
 [ext_resource type="Texture2D" uid="uid://diduiuqcrrfj5" path="res://addons/kenney_prototype_textures/dark/texture_13.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://80btby713w58" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="Script" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b4vu8msijbe7r" path="res://addons/kenney_prototype_textures/orange/texture_11.png" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c4cp5ktymuxqi" path="res://cheese.tscn" id="2_5vw27"]
 [ext_resource type="PackedScene" uid="uid://b6q3b1gk6xctm" path="res://ball.tscn" id="2_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b08mk811hqqpr" path="res://addons/kenney_prototype_textures/purple/texture_01.png" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://bsm5uml8gpo3n" path="res://scripts/camera.gd" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://bieomfngnbjv2" path="res://addons/kenney_prototype_textures/dark/texture_04.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bl6awxa3l1h8g" path="res://rat.tscn" id="7_272bh"]
 
@@ -46,7 +47,7 @@ albedo_texture = ExtResource("6_7mycd")
 
 [node name="Main" type="Node3D" unique_id=1298891562 node_paths=PackedStringArray("camera", "selected_object")]
 script = ExtResource("1_lquwl")
-camera = NodePath("Node3D/Camera3D")
+camera = NodePath("Node3D/Node3D/Node3D/Camera3D")
 selected_object = NodePath("ball")
 object_array = Array[PackedScene]([ExtResource("2_5vw27"), null])
 
@@ -64,11 +65,19 @@ material = SubResource("StandardMaterial3D_0xm2m")
 [node name="ball" parent="." unique_id=54507257 instance=ExtResource("2_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.692378, 6.7234683, -0.33934236)
 
-[node name="Node3D" type="Node3D" parent="." unique_id=2035777404]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.206, 0, -1.75)
+[node name="Node3D" type="Node3D" parent="." unique_id=2035777404 node_paths=PackedStringArray("camera_node", "camera_pitch_node", "camera_yaw_node")]
+script = ExtResource("5_kek77")
+camera_node = NodePath("Node3D/Node3D/Camera3D")
+camera_pitch_node = NodePath("Node3D/Node3D")
+camera_yaw_node = NodePath("Node3D")
 
-[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1230565907]
-transform = Transform3D(1, 0, 0, 0, 0.8994129, 0.43710008, 0, -0.43710008, 0.8994129, 0, 6, 8)
+[node name="Node3D" type="Node3D" parent="Node3D" unique_id=567087773]
+transform = Transform3D(1, 0, 0, 0, 0.9124061, -0.40928614, 0, 0.40928614, 0.9124061, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Node3D/Node3D" unique_id=247433538]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D/Node3D/Node3D" unique_id=1230565907]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, 10, -2.3841858e-07)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=403736691]
 navigation_mesh = SubResource("NavigationMesh_7mycd")
