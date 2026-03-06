@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ba5vg3t8ytq3c"]
+
+[ext_resource type="Texture2D" uid="uid://b4vu8msijbe7r" path="res://addons/kenney_prototype_textures/orange/texture_11.png" id="1_a14ys"]
+[ext_resource type="Texture2D" uid="uid://bieomfngnbjv2" path="res://addons/kenney_prototype_textures/dark/texture_04.png" id="2_begn5"]
+[ext_resource type="Texture2D" uid="uid://b08mk811hqqpr" path="res://addons/kenney_prototype_textures/purple/texture_01.png" id="3_unif6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_texture = ExtResource("1_a14ys")
+
+[sub_resource type="PrismMesh" id="PrismMesh_lquwl"]
+left_to_right = 1.0
+size = Vector3(4.17, 2.5, 1.815)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_texture = ExtResource("2_begn5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_texture = ExtResource("3_unif6")
+
+[node name="Ramp_Room" type="CSGBox3D" unique_id=1627107876]
+use_collision = true
+flip_faces = true
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="Ramp" type="CSGMesh3D" parent="." unique_id=608978142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.389, -1.262, -1.592)
+operation = 2
+flip_faces = true
+mesh = SubResource("PrismMesh_lquwl")
+material = SubResource("StandardMaterial3D_272bh")
+
+[node name="TopConnector" type="CSGCylinder3D" parent="." unique_id=1793397681]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 3.89, 0.8470001, -1.56)
+flip_faces = true
+radius = 1.0
+height = 2.8
+sides = 16
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Ramp2" type="CSGMesh3D" parent="." unique_id=1814285239]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.592, -1.262, 0.389)
+operation = 2
+flip_faces = true
+mesh = SubResource("PrismMesh_lquwl")
+material = SubResource("StandardMaterial3D_272bh")
+
+[node name="TopConnector2" type="CSGCylinder3D" parent="." unique_id=455077973]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 1.56, 0.847, 3.89)
+flip_faces = true
+radius = 1.0
+height = 2.8
+sides = 16
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Ramp3" type="CSGMesh3D" parent="." unique_id=843363377]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.389, -1.262, 1.592)
+operation = 2
+flip_faces = true
+mesh = SubResource("PrismMesh_lquwl")
+material = SubResource("StandardMaterial3D_272bh")
+
+[node name="Ramp4" type="CSGMesh3D" parent="." unique_id=396478169]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.592, -1.262, -0.389)
+operation = 2
+flip_faces = true
+mesh = SubResource("PrismMesh_lquwl")
+material = SubResource("StandardMaterial3D_272bh")

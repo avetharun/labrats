@@ -1,14 +1,13 @@
-[gd_scene format=3 uid="uid://bdtflmn6r4b3b"]
+[gd_scene format=3 uid="uid://bqxpripr2m3de"]
 
 [ext_resource type="Texture2D" uid="uid://diduiuqcrrfj5" path="res://addons/kenney_prototype_textures/dark/texture_13.png" id="1_ig7tw"]
-[ext_resource type="Script" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="Texture2D" uid="uid://b4vu8msijbe7r" path="res://addons/kenney_prototype_textures/orange/texture_11.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://80btby713w58" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c4cp5ktymuxqi" path="res://cheese.tscn" id="2_5vw27"]
 [ext_resource type="PackedScene" uid="uid://b6q3b1gk6xctm" path="res://ball.tscn" id="2_lquwl"]
-[ext_resource type="Texture2D" uid="uid://b08mk811hqqpr" path="res://addons/kenney_prototype_textures/purple/texture_01.png" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bnyrucqh8loyv" path="res://room_basic.tscn" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://bsm5uml8gpo3n" path="res://scripts/camera.gd" id="5_kek77"]
-[ext_resource type="Texture2D" uid="uid://bieomfngnbjv2" path="res://addons/kenney_prototype_textures/dark/texture_04.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bl6awxa3l1h8g" path="res://rat.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://ba5vg3t8ytq3c" path="res://room_ramps.tscn" id="8_5vw27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h2yge"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -26,24 +25,11 @@ tonemap_mode = 2
 albedo_texture = ExtResource("1_ig7tw")
 uv1_triplanar = true
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_7mycd"]
-vertices = PackedVector3Array(-2.2255096, 0.5999999, 2, 2.0244904, 0.5999999, 2, 2.0244904, 0.5999999, -0.25, -0.97550964, 0.5999999, -0.25, -2.4755096, 0.8499999, 0.5, -0.97550964, 1.0999999, -0.75, 4.7744904, 3.1, -1.25, 4.7744904, 3.35, -2, -2.2255096, 0.5999999, -2, 1.8994904, 2.85, -1, 1.9744911, 2.85, -2, -2.4755096, 0.8499999, -0.5, -5.4755096, 0.8499999, 0.5, -9.72551, 0.5999999, -2, -9.72551, 0.5999999, 2, -5.7255096, 0.5999999, 2, -5.4755096, 0.8499999, -0.5, -5.7255096, 0.5999999, -2)
-polygons = [PackedInt32Array(4, 3, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 10), PackedInt32Array(10, 6, 9), PackedInt32Array(10, 9, 5), PackedInt32Array(10, 5, 8), PackedInt32Array(5, 11, 8), PackedInt32Array(5, 3, 11), PackedInt32Array(11, 3, 4), PackedInt32Array(11, 4, 12), PackedInt32Array(12, 15, 16), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 14), PackedInt32Array(17, 14, 13), PackedInt32Array(12, 16, 11)]
+[sub_resource type="NavigationMesh" id="NavigationMesh_272bh"]
+vertices = PackedVector3Array(7.25, 0.8114419, 4, 8.25, 0.8114419, 4, 8.25, 0.8114419, 2.5, 7.25, 0.8114419, 2.5, 2.5, 0.8114419, -0.5, 2.25, 0.5614419, -2, -2, 0.5614419, -2, -2, 0.5614419, 2.25, 2.25, 0.5614419, 2.25, 2.5, 0.8114419, 0.5, 5.75, 0.5614419, 2.25, 5.5, 0.8114419, 0.5, 5.5, 0.8114419, -0.5, 10, 0.5614419, 2.25, 10, 0.5614419, -2, 5.75, 0.5614419, -2, 8.25, 0.8114419, 5.5, 7.25, 0.8114419, 5.5, 8.25, 0.8114419, 13.25, 8.25, 0.8114419, 10.25, 7.25, 0.8114419, 10.25, 7.25, 0.8114419, 13.25, 8, 0.5614419, 14.5, 5.75, 0.5614419, 5.75, 5.75, 0.5614419, 13.5, 5.75, 0.5614419, 17.75, 8, 0.5614419, 17.75, 10, 0.5614419, 10, 10, 0.5614419, 5.75, 5.75, 0.5614419, 10, 8.5, 1.0614419, 14.5, 10, 0.5614419, 13.5, 8.75, 3.311442, 20.75, 9.25, 2.811442, 20.75, 8.95, 3.061442, 18.25, 8.65, 3.311442, 18.25, 10, 0.5614419, 25.5, 10, 0.5614419, 23, 6.75, 0.5614419, 23, 5.75, 0.5614419, 25.5, 10, 2.811442, 22.5, 10, 3.311442, 18.642857, 5.75, 0.5614419, 21.25, 6.75, 1.0614419, 22.5, 9.25, 2.561442, 21.25)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(4, 9, 5), PackedInt32Array(5, 9, 8), PackedInt32Array(5, 8, 7), PackedInt32Array(5, 7, 6), PackedInt32Array(3, 10, 2), PackedInt32Array(2, 10, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(12, 9, 4), PackedInt32Array(12, 15, 11), PackedInt32Array(11, 15, 2), PackedInt32Array(2, 15, 13), PackedInt32Array(13, 15, 14), PackedInt32Array(17, 0, 16), PackedInt32Array(16, 0, 1), PackedInt32Array(22, 21, 18), PackedInt32Array(18, 21, 20), PackedInt32Array(18, 20, 19), PackedInt32Array(23, 17, 16), PackedInt32Array(21, 22, 24), PackedInt32Array(24, 22, 26), PackedInt32Array(24, 26, 25), PackedInt32Array(19, 29, 27), PackedInt32Array(27, 29, 23), PackedInt32Array(27, 23, 16), PackedInt32Array(27, 16, 28), PackedInt32Array(19, 20, 29), PackedInt32Array(22, 18, 30), PackedInt32Array(30, 18, 31), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 35), PackedInt32Array(34, 35, 30), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(40, 33, 41), PackedInt32Array(41, 33, 34), PackedInt32Array(41, 34, 30), PackedInt32Array(41, 30, 31), PackedInt32Array(43, 38, 42), PackedInt32Array(42, 38, 39), PackedInt32Array(40, 44, 33), PackedInt32Array(40, 43, 44), PackedInt32Array(44, 43, 42)]
 agent_height = 0.25
 agent_radius = 0.25
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
-albedo_texture = ExtResource("2_0xm2m")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
-albedo_texture = ExtResource("3_h2yge")
-
-[sub_resource type="PrismMesh" id="PrismMesh_lquwl"]
-left_to_right = 1.0
-size = Vector3(4.17, 2.5, 1.815)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
-albedo_texture = ExtResource("6_7mycd")
 
 [node name="Main" type="Node3D" unique_id=1298891562 node_paths=PackedStringArray("camera", "selected_object")]
 script = ExtResource("1_lquwl")
@@ -59,6 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 0.017452382, 0.99984765, 0, -0.99984765, 0.0
 shadow_enabled = true
 
 [node name="floor" type="CSGBox3D" parent="." unique_id=1417799370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.3066463)
 size = Vector3(50, 0.1, 50)
 material = SubResource("StandardMaterial3D_0xm2m")
 
@@ -70,6 +57,7 @@ script = ExtResource("5_kek77")
 camera_node = NodePath("Node3D/Node3D/Camera3D")
 camera_pitch_node = NodePath("Node3D/Node3D")
 camera_yaw_node = NodePath("Node3D")
+enable_panning = true
 
 [node name="Node3D" type="Node3D" parent="Node3D" unique_id=567087773]
 transform = Transform3D(1, 0, 0, 0, 0.9124061, -0.40928614, 0, 0.40928614, 0.9124061, 0, 0, 0)
@@ -79,45 +67,83 @@ transform = Transform3D(1, 0, 0, 0, 0.9124061, -0.40928614, 0, 0.40928614, 0.912
 [node name="Camera3D" type="Camera3D" parent="Node3D/Node3D/Node3D" unique_id=1230565907]
 transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, 10, -2.3841858e-07)
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=403736691]
-navigation_mesh = SubResource("NavigationMesh_7mycd")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=932485969]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 0)
-use_collision = true
-flip_faces = true
-size = Vector3(5, 5, 5)
-material = SubResource("StandardMaterial3D_h2yge")
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/CSGBox3D" unique_id=1584676150]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -3.8794146, -1.6089265, 0)
-flip_faces = true
-radius = 0.86572266
-height = 2.7944336
-sides = 16
-material = SubResource("StandardMaterial3D_1bvp3")
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/CSGBox3D" unique_id=1065230625]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 3.6292424, 0.84656644, -1.5597003)
-flip_faces = true
-radius = 0.86572266
-height = 2.7944336
-sides = 16
-material = SubResource("StandardMaterial3D_1bvp3")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGBox3D" unique_id=150923891]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.72551, 0, 0)
-use_collision = true
-flip_faces = true
-size = Vector3(5, 5, 5)
-material = SubResource("StandardMaterial3D_h2yge")
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="NavigationRegion3D/CSGBox3D" unique_id=1153206926]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3164094, -1.2620223, -1.5915256)
-operation = 2
-flip_faces = true
-mesh = SubResource("PrismMesh_lquwl")
-material = SubResource("StandardMaterial3D_272bh")
-
 [node name="rat" parent="." unique_id=134169383 instance=ExtResource("7_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.046398, 1.6752543, 0.33190107)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7936723, 0.8721862, 0.33190107)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1958742690]
+navigation_mesh = SubResource("NavigationMesh_272bh")
+
+[node name="Basic_Room" parent="NavigationRegion3D" unique_id=949442273 instance=ExtResource("5_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5614424, 0)
+
+[node name="Basic_Room2" parent="NavigationRegion3D/Basic_Room/Connector" parent_id_path=PackedInt32Array(949442273, 330078365) index="0" unique_id=2017964038 instance=ExtResource("5_7mycd")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.5000001, 3.8889148, 0)
+
+[node name="Connector" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2" index="0" unique_id=330078365]
+visible = false
+
+[node name="Connector2" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2" index="1" unique_id=1787324701]
+visible = false
+
+[node name="Connector3" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2" index="2" unique_id=1563793944]
+visible = false
+
+[node name="Basic_Room3" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4" parent_id_path=PackedInt32Array(2017964038, 913099791) index="0" unique_id=1191287837 instance=ExtResource("5_7mycd")]
+transform = Transform3D(1.9106855e-15, -1, 4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1, 0, -4.371139e-08, -1.4999999, -3.8997386, -4.7683716e-07)
+
+[node name="Connector" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3" index="0" unique_id=330078365]
+visible = false
+
+[node name="Connector2" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3" index="1" unique_id=1787324701]
+visible = false
+
+[node name="Connector3" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3" index="2" unique_id=1563793944]
+visible = false
+
+[node name="Ramp_Room" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4" parent_id_path=PackedInt32Array(1191287837, 913099791) index="0" unique_id=1627107876 instance=ExtResource("8_5vw27")]
+transform = Transform3D(1.9106855e-15, -1, 4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1, 0, -4.371139e-08, -1.4999998, -3.8972921, 0)
+
+[node name="Ramp" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room" index="0" unique_id=608978142]
+visible = false
+
+[node name="TopConnector" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room" index="1" unique_id=1793397681]
+visible = false
+
+[node name="Ramp_Room2" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2" parent_id_path=PackedInt32Array(1627107876, 455077973) index="0" unique_id=912196205 instance=ExtResource("8_5vw27")]
+transform = Transform3D(1.9106855e-15, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -1, 0, -4.371139e-08, 0.8470001, 3.8791256, 1.5600004)
+
+[node name="TopConnector" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2/Ramp_Room2" index="1" unique_id=1793397681]
+visible = false
+
+[node name="Ramp2" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2/Ramp_Room2" index="2" unique_id=1814285239]
+visible = false
+
+[node name="TopConnector2" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2/Ramp_Room2" index="3" unique_id=455077973]
+visible = false
+
+[node name="Ramp3" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2/Ramp_Room2" index="4" unique_id=843363377]
+visible = false
+
+[node name="Ramp4" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2/Ramp_Room2" index="5" unique_id=396478169]
+visible = false
+
+[node name="Ramp3" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room" index="4" unique_id=843363377]
+visible = false
+
+[node name="Ramp4" parent="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room" index="5" unique_id=396478169]
+visible = false
+
+[node name="Connector2" parent="NavigationRegion3D/Basic_Room" index="1" unique_id=1787324701]
+visible = false
+
+[node name="Connector3" parent="NavigationRegion3D/Basic_Room" index="2" unique_id=1563793944]
+visible = false
+
+[node name="Connector4" parent="NavigationRegion3D/Basic_Room" index="3" unique_id=913099791]
+visible = false
+
+[editable path="NavigationRegion3D/Basic_Room"]
+[editable path="NavigationRegion3D/Basic_Room/Connector/Basic_Room2"]
+[editable path="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3"]
+[editable path="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room"]
+[editable path="NavigationRegion3D/Basic_Room/Connector/Basic_Room2/Connector4/Basic_Room3/Connector4/Ramp_Room/TopConnector2/Ramp_Room2"]

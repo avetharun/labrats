@@ -36,8 +36,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var rel := event.screen_relative as Vector2
 		if Input.is_action_pressed("right_click"):
-			rot_goal=-rel.x
-			pitch_goal=-rel.y
+			rot_goal=-rel.x * 5.0
+			pitch_goal=-rel.y * 5.0
 		elif Input.is_action_pressed("pan"):
 			pos_goal = rel
 			
