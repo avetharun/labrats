@@ -21,11 +21,10 @@ func stop_moving()->void:
 var retarget_duration : float = 0.25
 func _physics_process(delta: float) -> void:
 	if target == null:
-		print("Target null, stopping moving")
 		stop_moving()
 	retarget_duration -= delta
 	if retarget_duration <=0 and target != null:
-		print("Retargeting")
+		
 		retarget_duration = retarget_interval
 		if target:
 			update_target_location(target.global_position)
